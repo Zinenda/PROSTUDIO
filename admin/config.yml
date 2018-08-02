@@ -1,0 +1,28 @@
+backend:
+  name: git-gateway
+  accept_roles:
+    - admin
+  branch: master 
+
+media_folder: "assets/img/uploads"
+
+collections:
+  - label: "Slider"
+    name: "slider"
+    folder: "collection/_slider"
+    create: true
+    fields:
+      - {label: "Titulo", name: "title", widget: "string"}
+      - {label: "Imagem", name: "image", widget: "image"}
+
+  - label: "Galeria"
+    name: "galeria"
+    folder: "collection/_galeria"
+    create: true
+    fields:
+      - {label: "Titulo", name: "title", widget: "string"}
+      - label: "Categoria"
+        name: "tag"
+        widget: "select"
+        options: ["casamentos", "aniversarios", "publicidades", "eventos"]
+      - {label: "Imagem", name: "image", widget: "image"}

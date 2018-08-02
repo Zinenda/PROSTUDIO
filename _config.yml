@@ -21,6 +21,11 @@ plugins:
 
 permalink: pretty
 
+collections_dir: collections
+collections:
+  - slider
+  - galeria
+
 # Pagination Settings
 pagination:
   enabled: true
