@@ -1,0 +1,18 @@
+- title: Sobre
+  link: /sobre
+
+- title: Contactos
+  link: "#contactos"
+  modal: true
+
+- title: Casamentos
+  link: /casamentos/
+
+- title: Aniversários
+  link: /aniversarios/
+
+- title: Publicidades
+  link: /publicidades/
+
+- title: Eventos Institucionais
+  link: /eventos/

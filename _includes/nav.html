@@ -1,0 +1,11 @@
+<nav id="myNav" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+    <div class="overlay-content">
+        {% for item in site.data.nav %}
+            <a href="{{ item.link }}" title="{{ item.title }}" {% if item.modal %}class="modal-trigger"{% endif %}>{{ item.title }}</a>
+        {% endfor %}
+    </div>
+</nav>
+
+<span onclick="openNav()">open</span>

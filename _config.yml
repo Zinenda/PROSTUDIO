@@ -8,6 +8,10 @@ url: "https://prostudiomoz.com" # the base hostname & protocol for your site, e.
 # Build settings
 markdown: kramdown
 
+sass:
+  style: compressed
+  sass_dir: assets/_sass
+
 plugins:
   - jekyll-feed
   - jekyll-paginate-v2
