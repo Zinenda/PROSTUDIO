@@ -1,3 +1,9 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    margin: 0;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -9,6 +15,10 @@
 .responsive-img {
     max-width: 100%;
     height: auto;
+}
+
+.vertical-img {
+    vertical-align: middle;
 }
 
 @import

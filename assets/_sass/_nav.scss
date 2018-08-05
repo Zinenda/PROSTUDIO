@@ -11,8 +11,6 @@
     transition: .5s;
 
     .overlay-content {
-        position: relative;
-        top: 20%;
         width: 100%;
         text-align: center;
         margin-top: 30px;
@@ -37,6 +35,11 @@
         right: 45px;
         font-size: 4rem
     }
+}
+
+.navbtn {
+    font-size: 2rem;
+    cursor: pointer;
 }
 
 @media screen and (max-height: 450px) {
