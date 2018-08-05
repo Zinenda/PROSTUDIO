@@ -35,6 +35,8 @@ GEM
       jekyll (~> 3.0)
     jekyll-sass-converter (1.5.2)
       sass (~> 3.4)
+    jekyll-seo-tag (2.5.0)
+      jekyll (~> 3.3)
     jekyll-target-blank (1.1.0)
       jekyll (~> 3.0)
       nokogiri (~> 1.8.2)
@@ -80,6 +82,7 @@ DEPENDENCIES
   jekyll-email-protect
   jekyll-feed (~> 0.6)
   jekyll-paginate-v2
+  jekyll-seo-tag
   jekyll-target-blank
   tzinfo-data
   wdm (~> 0.1.0)
