@@ -24,8 +24,8 @@ permalink: pretty
 
 collections_dir: collections
 collections:
-  - slider
-  - galeria
+  slider:
+  galeria:
 
 # Pagination Settings
 pagination:
