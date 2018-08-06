@@ -2,7 +2,7 @@
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
     <div class="overlay-content">
-        <a href="/"><img src="/assets/img/white-logo.png" alt="{{ site.title }}"></a>
+        <a href="/"><img src="/assets/img/white-logo.png" alt="{{ site.title }}" style="width: 80px"></a>
         {% for item in site.data.nav %}
             <a href="{{ item.link }}" title="{{ item.title }}" {% if item.modal %}class="modal-trigger"{% endif %}>{{ item.title }}</a>
         {% endfor %}
