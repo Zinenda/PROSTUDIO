@@ -1,0 +1,19 @@
+- title: Facebook
+  link: https://www.facebook.com/Pro.studio.Tete/
+  icon: "fab fa-facebook-f"
+
+- title: Messenger
+  link: https://m.me/Pro.studio.Tete/
+  icon: "fab fa-facebook-messenger"
+
+- title: Instagram
+  link: https://instagram/prostudiomoz
+  icon: "fab fa-instagram"
+
+- title: Email
+  link: "maito:info@prostudiomoz.com"
+  icon: "fas fa-envelope"
+
+- title: +258 84 610 1512
+  link: "tel:+258 84 610 1512"
+  icon: "fas fa-phone"

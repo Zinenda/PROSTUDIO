@@ -4,6 +4,8 @@ description: >- # this means to ignore newlines until "baseurl:"
   Videos e Fotografias
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://prostudiomoz.com" # the base hostname & protocol for your site, e.g. http://example.com
+image: /assets/img/whitelogo.svg
+logo: /assets/img/blacklogo.svg
 
 # Build settings
 markdown: kramdown
@@ -29,7 +31,7 @@ collections:
 
 # Pagination Settings
 pagination:
-  enabled: true
+  enabled: false
   per_page: 15
   permalink: '/:num/'
   title: ':title | :num of :max'

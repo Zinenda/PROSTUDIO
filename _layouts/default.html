@@ -2,10 +2,11 @@
 <html lang="pt">
     {% include head.html %}
     <body>
+        {% include header.html %}
         {% include nav.html %}
-
         <main class="animate-bottom">
             {{ content }}
         </main>
-    </body>
-</html>
+        {% include fab.html %}
+        {% include fontawesome.html %}
+        {% include scripts.html %}

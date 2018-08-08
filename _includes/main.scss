@@ -1,3 +1,6 @@
+$primary-color: #f5f5f5;
+$secondary-color: #444;
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 100%;
@@ -12,6 +15,10 @@ body {
     position: relative;
 }
 
+i {
+    line-height: inherit;
+}
+
 .responsive-img {
     max-width: 100%;
     height: auto;
@@ -21,8 +28,15 @@ body {
     vertical-align: middle;
 }
 
+.inline-list {
+    list-style-type: none;
+    display: inline-flex;
+}
+
 @import
     "animate-bottom",
     "nav",
-    "slider"
+    "slider",
+    "shadows",
+    "buttons"
 ;
