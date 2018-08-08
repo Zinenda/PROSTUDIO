@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+<div class="gallery-row">
+    <div class="gallery-column">
+        {% for item in paginator.posts limit: 7 %}
+            <img src="{{ item.image }}" alt="{{ item.title }}">
+        {% endfor %}
+        {% for item in paginator.posts offset: 6  limit: 6 %}
+            <img src="{{ item.image }}" alt="{{ item.title }}">
+        {% endfor %}
+        {% for item in paginator.posts offset: 12  limit: 7 %}
+            <img src="{{ item.image }}" alt="{{ item.title }}">
+        {% endfor %}
+        {% for item in paginator.posts offset: 19  limit: 6 %}
+            <img src="{{ item.image }}" alt="{{ item.title }}">
+        {% endfor %}
+    </div>
+</div>
