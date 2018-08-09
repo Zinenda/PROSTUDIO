@@ -5,25 +5,27 @@ layout: default
 <div class="gallery-row">
     <div class="gallery-column">
         {% for item in paginator.posts limit: 4 %}
-            <img src="{{ item.image }}" alt="{{ item.title }}" class="responsive-img">
+            <img src="{{ item.image }}" alt="{{ item.title }}" class="responsive-img hoverable">
         {% endfor %}
     </div>
 
     <div class="gallery-column">
         {% for item in paginator.posts offset: 4  limit: 3 %}
-            <img src="{{ item.image }}" alt="{{ item.title }}" class="responsive-img">
+            <img src="{{ item.image }}" alt="{{ item.title }}" class="responsive-img hoverable">
         {% endfor %}
     </div>
 
     <div class="gallery-column">
         {% for item in paginator.posts offset: 7  limit: 4 %}
-            <img src="{{ item.image }}" alt="{{ item.title }}" class="responsive-img">
+            <img src="{{ item.image }}" alt="{{ item.title }}" class="responsive-img hoverable">
         {% endfor %}
     </div>
 
     <div class="gallery-column">
         {% for item in paginator.posts offset: 11  limit: 3 %}
-            <img src="{{ item.image }}" alt="{{ item.title }}" class="responsive-img">
+            <img src="{{ item.image }}" alt="{{ item.title }}" class="responsive-img hoverable">
         {% endfor %}
     </div>
 </div>
+
+{% include pagination.html %}
