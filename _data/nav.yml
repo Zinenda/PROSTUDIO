@@ -1,10 +1,6 @@
 - title: Sobre
   link: /sobre
 
-- title: Contactos
-  link: "#contactos"
-  modal: true
-
 - title: Casamentos
   link: /casamentos/
 
