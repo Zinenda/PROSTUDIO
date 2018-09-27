@@ -2,30 +2,15 @@
 layout: default
 ---
 
-<div class="gallery-row">
-    <div class="gallery-column">
-        {% for item in paginator.posts limit: 4 %}
-            <img src="{{ item.image }}" alt="{{ item.title }}" class="responsive-img hoverable">
+<section class="row">
+    <div id="masonry-grid">
+        {% for item in paginator.posts %}
+            <div class="col s6 l3 no-padding">
+                <a href="{{ item.image }}" title="{{ item.title }}" data-lightbox="portfolio" data-title="{{ item.title }}">
+                    <img src="{{ item.image }}" alt="{{ item.title }}" class="responsive-img hoverable">
+                </a>
+            </div>
         {% endfor %}
     </div>
-
-    <div class="gallery-column">
-        {% for item in paginator.posts offset: 4  limit: 3 %}
-            <img src="{{ item.image }}" alt="{{ item.title }}" class="responsive-img hoverable">
-        {% endfor %}
-    </div>
-
-    <div class="gallery-column">
-        {% for item in paginator.posts offset: 7  limit: 4 %}
-            <img src="{{ item.image }}" alt="{{ item.title }}" class="responsive-img hoverable">
-        {% endfor %}
-    </div>
-
-    <div class="gallery-column">
-        {% for item in paginator.posts offset: 11  limit: 3 %}
-            <img src="{{ item.image }}" alt="{{ item.title }}" class="responsive-img hoverable">
-        {% endfor %}
-    </div>
-</div>
-
+</section>
 {% include pagination.html %}

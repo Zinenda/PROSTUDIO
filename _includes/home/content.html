@@ -1,0 +1,51 @@
+<div id="Sobre" class="tabcontent" style="min-height: 90vh;">
+    <h4 class="center-align bolder"><i class="fas fa-user"></i> Sobre Nós</h4>
+
+    {% for item in site.sobre limit: 1 %}
+        <div class="justify container">
+            {{ item.content }}
+        </div>
+    {% endfor %}
+</div>
+
+<div id="Servicos" class="tabcontent" style="min-height: 90vh;">
+  <h4 class="center-align bolder"><i class="fas fa-tasks"></i>Serviços</h4>
+  
+  <div class="row">
+    {% for item in site.servicos %}
+        <div class="col s12 l4">
+            <h5 class="center-align"><i class="fas fa-{{ item.icon }}"></i> {{ item.title }}</h5>
+
+            <div class="justify container">
+                {{ item.content }}
+            </div>
+        </div>
+    {% endfor %}
+  </div>
+</div>
+
+<div id="Portfolio" class="center tabcontent" style="min-height: 90vh;">
+    <h4 class="bolder"><i class="fas fa-image"></i>Portfólio</h4>
+  
+    <div class="row">
+        <div class="col s6 l3 no-padding">
+            <img src="/assets/img/uploads/b1-2.png" alt="" class="responsive-img hoverable">
+        </div>
+        <div class="col s6 l3 no-padding">
+            <img src="/assets/img/uploads/b1-3.png" alt="" class="responsive-img hoverable">
+        </div>
+        <div class="col s6 l3 no-padding">
+            <img src="/assets/img/uploads/b2-2.png" alt="" class="responsive-img hoverable">
+        </div>
+        <div class="col s6 l3 no-padding">
+            <img src="/assets/img/uploads/b3-2.png" alt="" class="responsive-img hoverable">
+        </div>
+    </div>
+
+    <a href="/portfolio/" class="btn-large waves-effect waves-light">Veja Mais</a>
+</div>
+
+<div id="Contactos" class="tabcontent center" style="min-height: 90vh;">
+  <h4 class="center-align bolder"><i class="fas fa-envelope"></i>Contactos</h4>
+  {% include social.html %}
+</div>

@@ -3,10 +3,11 @@
     {% include head.html %}
     <body>
         {% include header.html %}
-        {% include nav.html %}
         <main class="animate-bottom">
             {{ content }}
         </main>
-        {% include fab.html %}
+        {% if page.layout == "page" %}
+            {% include fab.html %}
+        {% endif %}
         {% include fontawesome.html %}
         {% include scripts.html %}

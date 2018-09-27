@@ -1,7 +1,12 @@
 <!-- netlify identity widget -->
 {% if page.title == "PROSTUDIO" %}
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-    <script src="/assets/js/slider.js"></script>
 {% endif %}
 <script src="/assets/js/buttons.js"></script>
 <script src="/assets/js/fab.js"></script>
+{% if page.layout == "page" %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/css/lightbox.min.css" integrity="sha256-auPoJwk/+RK6KSkib92Dkq1Y5hEkZvKtvSwucs15Skg=" crossorigin="anonymous" />
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox-plus-jquery.min.js" integrity="sha256-gbqsBwBVZ0bNBUY4I5rT6yRhMbB9roODov0c8qE4iNE=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js" defer></script>
+    <script src="/assets/js/init.js" defer></script>
+{% endif %}

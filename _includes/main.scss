@@ -33,17 +33,20 @@ i {
     display: inline-flex;
 }
 
-.center {
+.center, .center-align {
     text-align: center;
 }
 
+.no-padding {
+    padding: 0;
+}
+
 @import
+    "media-queries",
+    "grid",
     "animate-bottom",
     "nav",
-    "slider",
     "shadows",
     "buttons",
-    "media-queries",
-    "pagination",
-    "gallery-grid"
+    "pagination"
 ;
