@@ -1,57 +1,7 @@
-<div id="Sobre" class="tabcontent" style="min-height: 90vh;">
-    <h4 class="center-align">
-        <span class="fa-stack fa-2x">
-            <i class="fas fa-user fa-stack-1x"></i>
-            <i class="far fa-circle fa-stack-2x"></i>
-        </span>
-    </h4>
+{% include home/content/sobre.html %}
 
-    {% for item in site.sobre limit: 1 %}
-        <div class="justify container">
-            {{ item.content }}
-        </div>
-    {% endfor %}
-</div>
+{% include home/content/servicos.html %}
 
-<div id="Servicos" class="tabcontent" style="min-height: 90vh;">
-  <h4 class="center-align">
-    <span class="fa-stack fa-2x">
-        <i class="fas fa-tasks fa-stack-1x"></i>
-        <i class="far fa-circle fa-stack-2x"></i>
-    </span>
-  </h4>
-  
-  <div class="row">
-    {% for item in site.servicos %}
-        <div class="col s12 l4">
-            <h5 class="center-align"><i class="fas fa-{{ item.icon }}"></i> {{ item.title }}</h5>
+{% include home/content/portfolio.html %}
 
-            <div class="justify container">
-                {{ item.content }}
-            </div>
-        </div>
-    {% endfor %}
-  </div>
-</div>
-
-<div id="Portfolio" class="center tabcontent" style="min-height: 90vh;">
-    <h4>
-        <span class="fa-stack fa-2x">
-            <i class="fas fa-image fa-stack-1x"></i>
-            <i class="far fa-circle fa-stack-2x"></i>
-        </span>
-    </h4>
-
-
-    <a href="/galeria/" class="btn-large waves-effect waves-light">Veja Mais</a>
-</div>
-
-<div id="Contactos" class="tabcontent center" style="min-height: 90vh;">
-  <h4 class="center-align">
-    <span class="fa-stack fa-2x">
-        <i class="fas fa-envelope fa-stack-1x"></i>
-        <i class="far fa-circle fa-stack-2x"></i>
-    </span>
-  </h4>
-  {% include social.html %}
-</div>
+{% include home/content/contactos.html %}

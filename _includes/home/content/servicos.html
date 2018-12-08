@@ -1,0 +1,20 @@
+<div id="Servicos" class="tabcontent" style="min-height: 90vh;">
+    <h4 class="center-align">
+      <span class="fa-stack fa-2x">
+          <i class="fas fa-tasks fa-stack-1x"></i>
+          <i class="far fa-circle fa-stack-2x"></i>
+      </span>
+    </h4>
+    
+    <div class="row">
+      {% for item in site.servicos %}
+          <div class="col s12 l4">
+              <h5 class="center-align"><i class="fas fa-{{ item.icon }}"></i> {{ item.title }}</h5>
+  
+              <div class="justify container">
+                  {{ item.content }}
+              </div>
+          </div>
+      {% endfor %}
+    </div>
+  </div>

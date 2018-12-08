@@ -1,5 +1,7 @@
 (function($){
     $(function(){
+
+      M.updateTextFields();
   
       var $container = $('#masonry-grid');
       // initialize
