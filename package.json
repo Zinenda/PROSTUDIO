@@ -1,0 +1,11 @@
+{
+  "name": "PROSTUDIO",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Zinenda/PROSTUDIO.git",
+  "author": "Ivo Zinenda <izinenda@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "materialize-css": "next"
+  }
+}
