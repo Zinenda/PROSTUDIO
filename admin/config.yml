@@ -34,5 +34,5 @@ collections:
       - label: "Categoria"
         name: "tag"
         widget: "select"
-        options: ["casamentos", "aniversarios", "publicidades", "eventos"]
+        options: ["casamentos", "aniversarios", "booking", "eventos"]
       - {label: "Imagem", name: "image", widget: "image"}

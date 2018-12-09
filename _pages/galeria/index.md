@@ -1,9 +1,8 @@
 ---
-title: Casamentos
-image: /assets/img/headers/couple-on-romantic-date_4460x4460.jpg
+title: Galeria
+image: /assets/img/headers/pexels-photo-1655817.jpeg
 layout: page
 pagination:
     enabled: true
     collection: galeria
-    tag: casamentos
 ---
