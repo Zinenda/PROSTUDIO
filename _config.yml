@@ -4,7 +4,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   Videos e Fotografias
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://prostudiomoz.com" # the base hostname & protocol for your site, e.g. http://example.com
-image: /assets/img/whitelogo.svg
+image: /assets/img/prostudio.svg
 logo: /assets/img/blacklogo.svg
 
 # Build settings

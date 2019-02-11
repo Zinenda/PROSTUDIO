@@ -15,20 +15,14 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        text-align: center;
-    }
-
-    .page-title img {
-        width: 50%;
     }
 </style>
 
 <header class="page-header">
     <div class="page-title">
-        <a href="/" title="{{ site.title }}">
-            <img src="{{ site.image }}" alt="{{ site.title }}">
+        <a href="/">
+            <img src="{{ site.image }}" alt="">
         </a>
-        <br><br>
         {% include social.html %}
     </div>
 </header>
