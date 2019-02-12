@@ -11,4 +11,22 @@
             {{ item.content }}
         </div>
     {% endfor %}
+
+    <section class="container">
+        {% for item in site.sobre offset: 1 limit: 3 %}
+            <article class="col s12 l4">
+                <div class="center-align">
+                    <span class="fa-stack fa-1x">
+                        <i class="fas fa-{{ item.icon }} fa-stack-1x"></i>
+                        <i class="far fa-circle fa-stack-2x"></i>
+                    </span>
+                </div>
+                <p class="bolder center-align">{{ item.title }}</p>
+                
+                <div class="justify">
+                    {{ item.content }}
+                </div>
+            </article>
+        {% endfor %}
+    </section>
 </div>

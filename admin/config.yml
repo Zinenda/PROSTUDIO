@@ -1,10 +1,14 @@
 backend:
   name: git-gateway
-  accept_roles:
-    - admin
-  branch: master 
 
-media_folder: "assets/img/uploads"
+media_library:
+  name: cloudinary
+  config:
+    cloud_name: izitech
+    api_key: '737324531852346'
+    output_filename_only: true
+
+logo_url: 'https://d33wubrfki0l68.cloudfront.net/f1afd154dd1bd09e6957dce7291bfc56834b4489/b2edb/assets/img/brand/logo.svg'
 
 collections:
   - label: "Sobre"
@@ -13,8 +17,8 @@ collections:
     create: true
     fields:
       - {label: "Titulo", name: "title", widget: "string"}
-      - {label: "Icone", name: "icon", widget: "string"}
-      - {label: "Descrição", name: "body", widget: "markdown"}
+      - {label: "Ícone", name: "icon", widget: "string"}
+      - {label: "Conteúdo", name: "body", widget: "markdown"}
 
   - label: "Serviços"
     name: "servicos"
@@ -22,17 +26,19 @@ collections:
     create: true
     fields:
       - {label: "Titulo", name: "title", widget: "string"}
-      - {label: "Icone", name: "icon", widget: "string"}
-      - {label: "Descrição", name: "body", widget: "markdown"}
+      - {label: "Link", name: "link", widget: "string"}
+      - {label: "Ícone", name: "icon", widget: "string"}
+      - {label: "Imagem", name: "image", widget: "image"}
+      - {label: "Conteúdo", name: "body", widget: "markdown"}
 
-  - label: "Galeria"
-    name: "galeria"
-    folder: "collections/_galeria"
+  - label: "Portfólio"
+    name: "portfolio"
+    folder: "collections/_portfolio"
     create: true
     fields:
       - {label: "Titulo", name: "title", widget: "string"}
-      - label: "Categoria"
+      - label: "Tag"
         name: "tag"
         widget: "select"
-        options: ["casamentos", "aniversarios", "booking", "eventos"]
+        options: ["website", "identidade", "logotipo"]
       - {label: "Imagem", name: "image", widget: "image"}
