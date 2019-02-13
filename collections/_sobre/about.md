@@ -6,6 +6,6 @@ A Prostudio é uma empresa/marca jovem, dedicada na produção multimédia, foca
 
 Somos especializados na **captação fotográfica, produção de vídeo-clipes musicais, vídeo publicitários, cobertura de vários tipos de eventos.**
 
-Entre as coberturas que fazemos são, podemo ser corporativos, como conferências, exposições, assembleias e congressos. Ou podem ser recreativas, como, casamentos, festas de aniversários entre outros.
+As coberturas podem ser corporativas: conferências, exposições, assembleias e congressos. Ou podem ser recreativas: casamentos, festas de aniversários entre outros.
 
-Disponibilizamos de vários equipamentos para captação de imagens, inclusive um estudio de produção áudio-visual
+Disponibilizamos vários equipamentos para captação de imagens, inclusive um estúdio de produção áudio-visual
