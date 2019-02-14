@@ -12,7 +12,19 @@ logo_url: 'https://d33wubrfki0l68.cloudfront.net/f1afd154dd1bd09e6957dce7291bfc5
 
 collections:
 
-  - label: Foto de Capa
+  - label: "Fotos de Capa"
+    name: "covers"
+    folder: "collections/_covers"
+    create: true
+    widget: image
+    media_library:
+      config:
+        default_transformation:
+          -   - fetch_format: auto
+                    width: 1920    
+                    quality: 60
+                    crop: fill
+                    aspect_ratio: 16:9
 
   - label: "Sobre"
     name: "sobre"

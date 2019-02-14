@@ -26,6 +26,7 @@ permalink: pretty
 
 collections_dir: collections
 collections:
+  covers:
   sobre:
   servicos:
   galeria:
