@@ -25,6 +25,7 @@ collections:
                     quality: 60
                     crop: fill
                     aspect_ratio: 16:9
+    field: - {label: "Titulo", name: "title", widget: "string"}
 
   - label: "Sobre"
     name: "sobre"
@@ -42,17 +43,37 @@ collections:
     fields:
       - {label: "Titulo", name: "title", widget: "string"}
       - {label: "Link", name: "link", widget: "string"}
-      - {label: "Imagem", name: "image", widget: "image"}
-      - {label: "Conteúdo", name: "body", widget: "markdown"}
+      - label: "Imagem"
+        name: "image"
+        widget: "image"
+        media_library:
+          config:
+            default_transformation:
+              -   - fetch_format: auto
+                        width: 200    
+                        quality: 60
+                        crop: fill
+                        radius: max
+                        gravity: auto
 
-  - label: "Portfólio"
-    name: "portfolio"
-    folder: "collections/_portfolio"
+  - label: "Galeria"
+    name: "galeria"
+    folder: "collections/_galeria"
     create: true
+    widget: "list"
     fields:
       - {label: "Titulo", name: "title", widget: "string"}
       - label: "Tag"
         name: "tag"
         widget: "select"
-        options: ["website", "identidade", "logotipo"]
-      - {label: "Imagem", name: "image", widget: "image"}
+        options: ["eventos", "casamentos", "festas", "publicidade", "booking"]
+      - label: "Imagens"
+        name: "images"
+        widget: "image"
+        media_library:
+          config:
+            default_transformation:
+              -   - fetch_format: auto
+                        width: auto:breakpoints_640_1920_30
+                        quality: 60
+                        crop: fill
