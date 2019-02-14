@@ -4,13 +4,16 @@ backend:
 media_library:
   name: cloudinary
   config:
-    cloud_name: izitech
-    api_key: '737324531852346'
+    cloud_name: 
+    api_key: 
     output_filename_only: true
 
 logo_url: 'https://d33wubrfki0l68.cloudfront.net/f1afd154dd1bd09e6957dce7291bfc56834b4489/b2edb/assets/img/brand/logo.svg'
 
 collections:
+
+  - label: Foto de Capa
+
   - label: "Sobre"
     name: "sobre"
     folder: "collections/_sobre"
@@ -27,7 +30,6 @@ collections:
     fields:
       - {label: "Titulo", name: "title", widget: "string"}
       - {label: "Link", name: "link", widget: "string"}
-      - {label: "Ícone", name: "icon", widget: "string"}
       - {label: "Imagem", name: "image", widget: "image"}
       - {label: "Conteúdo", name: "body", widget: "markdown"}
 

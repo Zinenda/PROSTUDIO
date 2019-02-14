@@ -13,7 +13,7 @@
             </div>
         {% endfor %}
 
-        <section>
+        <section class="row">
             {% for item in site.sobre offset: 1 limit: 3 %}
                 <article class="col s12 l4">
                     <div class="center-align">
@@ -24,7 +24,7 @@
                     </div>
                     <p class="bolder center-align">{{ item.title }}</p>
                     
-                    <div class="justify">
+                    <div class="justify light">
                         {{ item.content }}
                     </div>
                 </article>
