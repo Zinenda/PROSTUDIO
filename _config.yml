@@ -29,6 +29,7 @@ collections:
   covers:
   sobre:
   servicos:
+    output: true
   galeria:
 
 # Pagination Settings

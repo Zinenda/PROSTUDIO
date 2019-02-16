@@ -4,8 +4,8 @@ backend:
 media_library:
   name: cloudinary
   config:
-    cloud_name: 
-    api_key: 
+    cloud_name: prostudio-moz
+    api_key: 449635878634723
     output_filename_only: true
 
 logo_url: 'https://d33wubrfki0l68.cloudfront.net/f1afd154dd1bd09e6957dce7291bfc56834b4489/b2edb/assets/img/brand/logo.svg'
@@ -16,16 +16,19 @@ collections:
     name: "covers"
     folder: "collections/_covers"
     create: true
-    widget: image
-    media_library:
-      config:
-        default_transformation:
-          -   - fetch_format: auto
+    fields: 
+      - {label: "Titulo", name: "title", widget: "string"}
+      - label: "Imagem"
+        name: "image"
+        widget: image
+        media_library:
+          config:
+            default_transformation:
+              -   - fetch_format: auto
                     width: 1920    
                     quality: 60
                     crop: fill
                     aspect_ratio: 16:9
-    field: - {label: "Titulo", name: "title", widget: "string"}
 
   - label: "Sobre"
     name: "sobre"
@@ -41,39 +44,30 @@ collections:
     folder: "collections/_servicos"
     create: true
     fields:
-      - {label: "Titulo", name: "title", widget: "string"}
-      - {label: "Link", name: "link", widget: "string"}
-      - label: "Imagem"
-        name: "image"
+      - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
+      - {label: "Serviço", name: "title", widget: "string"}
+      - label: "Imagem Principal"
+        name: "main-image"
         widget: "image"
         media_library:
           config:
             default_transformation:
               -   - fetch_format: auto
-                        width: 200    
-                        quality: 60
-                        crop: fill
-                        radius: max
-                        gravity: auto
-
-  - label: "Galeria"
-    name: "galeria"
-    folder: "collections/_galeria"
-    create: true
-    widget: "list"
-    fields:
-      - {label: "Titulo", name: "title", widget: "string"}
-      - label: "Tag"
-        name: "tag"
-        widget: "select"
-        options: ["eventos", "casamentos", "festas", "publicidade", "booking"]
-      - label: "Imagens"
-        name: "images"
-        widget: "image"
-        media_library:
-          config:
-            default_transformation:
-              -   - fetch_format: auto
-                        width: auto:breakpoints_640_1920_30
+                    width: 200
+                    quality: 60
+                    crop: fill
+      - label: "Galeria"
+        name: "gallery"
+        widget: "list"
+        fields:
+          - {label: "Titulo da Foto", name: "photo-title", widget: "string", required: false}
+          - label: "Foto"
+            name: "photo"
+            widget: "image"
+            media_library:
+              config:
+                default_transformations:
+                  -   - fetch_format: auto
+                        width: auto:breakpoints_640_1920_30   
                         quality: 60
                         crop: fill
