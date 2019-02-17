@@ -29,7 +29,6 @@ collections:
   sobre:
   servicos:
     output: true
-  galeria:
 
 # Pagination Settings
 pagination:
