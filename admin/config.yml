@@ -6,7 +6,12 @@ media_library:
   config:
     cloud_name: prostudio-moz
     api_key: 449635878634723
-    output_filename_only: true
+  output_filename_only: false
+  default_transformations:
+    -   - fetch_format: auto
+          width: auto:breakpoints_200_1920_30
+          quality: 60
+          crop: scale
 
 logo_url: 'https://d33wubrfki0l68.cloudfront.net/f1afd154dd1bd09e6957dce7291bfc56834b4489/b2edb/assets/img/brand/logo.svg'
 
@@ -64,10 +69,11 @@ collections:
           - label: "Foto"
             name: "photo"
             widget: "image"
+            tagname: ''
             media_library:
               config:
                 default_transformations:
                   -   - fetch_format: auto
-                        width: auto:breakpoints_640_1920_30   
+                        width: auto:breakpoints_640_1920_30  
                         quality: 60
                         crop: fill
