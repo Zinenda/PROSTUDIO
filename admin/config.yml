@@ -41,18 +41,9 @@ collections:
         fields:
           - {label: "Ativação", name: "enabled", widget: "boolean", default: true}
           - {label: "Categoria", name: "tag", widget: "string"}
-
-  - label: "Galeria"
-    name: "galeria"
-    create: true
-    folder: "collections/_galeria"
-    fields:
-      - {label: "Categoria", name: "title", widget: "string"}
-      - {label: "Tag", name: "tag", widget: "string"}
       - label: "Foto"
         name: "photo"
         widget: "image"
         media_library:
           config:
             multiple: true
-            resize: 1920x1080
