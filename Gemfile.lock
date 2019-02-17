@@ -29,8 +29,6 @@ GEM
       safe_yaml (~> 1.0)
     jekyll-analytics (0.1.11)
     jekyll-email-protect (1.1.0)
-    jekyll-feed (0.11.0)
-      jekyll (~> 3.3)
     jekyll-paginate-v2 (2.1.0)
       jekyll (~> 3.0)
     jekyll-sass-converter (1.5.2)
@@ -79,7 +77,6 @@ DEPENDENCIES
   jekyll (~> 3.8.3)
   jekyll-analytics
   jekyll-email-protect
-  jekyll-feed (~> 0.6)
   jekyll-paginate-v2
   jekyll-seo-tag
   jekyll-target-blank

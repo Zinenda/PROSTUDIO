@@ -3,7 +3,6 @@ source "https://rubygems.org"
 gem "jekyll", "~> 3.8.3"
 
 group :jekyll_plugins do
-  gem "jekyll-feed", "~> 0.6"
   gem "jekyll-paginate-v2"
   gem "jekyll-target-blank"
   gem "jekyll-email-protect"

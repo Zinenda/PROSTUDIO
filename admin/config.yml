@@ -1,76 +1,58 @@
 backend:
   name: git-gateway
+  branch: master
 
 media_library:
-  name: cloudinary
+  name: uploadcare
   config:
-    cloud_name: prostudio-moz
-    api_key: 449635878634723
-  output_filename_only: false
-  default_transformations:
-    -   - fetch_format: auto
-          width: auto:breakpoints_200_1920_30
-          quality: 60
-          crop: scale
+    publicKey: 9cdf1bc10a2c2507466c
 
-logo_url: 'https://d33wubrfki0l68.cloudfront.net/f1afd154dd1bd09e6957dce7291bfc56834b4489/b2edb/assets/img/brand/logo.svg'
+site_url: https://prostudiomoz.com
+display_url: https://prostudiomoz.com
+logo_url: https://d33wubrfki0l68.cloudfront.net/f1afd154dd1bd09e6957dce7291bfc56834b4489/b2edb/assets/img/brand/logo.svg
 
 collections:
-
-  - label: "Fotos de Capa"
-    name: "covers"
+  - label: "Imagem de Fundo"
+    name: "cover-img"
     folder: "collections/_covers"
-    create: false
-    fields: 
+    fields:
+      - {label: "Imagem", name: "image", widget: "image"}
       - {label: "Titulo", name: "title", widget: "string"}
-      - label: "Imagem"
-        name: "image"
-        widget: image
-        media_library:
-          config:
-            default_transformation:
-              -   - fetch_format: auto
-                    width: 1920    
-                    quality: 60
-                    crop: fill
-                    aspect_ratio: 16:9
 
   - label: "Sobre"
     name: "sobre"
-    folder: "collections/_sobre"
-    create: true
+    folder: "collection/_sobre"
     fields:
       - {label: "Titulo", name: "title", widget: "string"}
-      - {label: "Ícone", name: "icon", widget: "string"}
-      - {label: "Conteúdo", name: "body", widget: "markdown"}
+      - {label: "Icones", name: "icons", widget: "string"}
+      - {label: "Descrição", name: "body", widget: "markdown"}
 
   - label: "Serviços"
     name: "servicos"
-    folder: "collections/_servicos"
     create: true
+    folder: "collections/_servicos"
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
       - {label: "Serviço", name: "title", widget: "string"}
+      - {label: "Imagem de capa", name: "main-image", widget: "image"}
       - label: "Paginação"
         name: "pagination"
         widget: "object"
         fields:
-          - {label: "Activo", name: "enabled", widget: "boolean", default: "true"}
-          - {label: "Serviço", name: "tag", widget: "string"}
-      - label: "Imagem Principal"
-        name: "main-image"
+          - {label: "Ativação", name: "enabled", widget: "boolean", default: true}
+          - {label: "Categoria", name: "tag", widget: "string"}
+
+  - label: "Galeria"
+    name: "galeria"
+    create: true
+    folder: "collections/_galeria"
+    fields:
+      - {label: "Categoria", name: "title", widget: "string"}
+      - {label: "Tag", name: "tag", widget: "string"}
+      - label: "Foto"
+        name: "photo"
         widget: "image"
         media_library:
           config:
-          output_filename_only: true
-      - label: "Galeria"
-        name: "gallery"
-        widget: "list"
-        fields:
-          - {label: "Titulo da Foto", name: "photo-title", widget: "string", required: false}
-          - label: "Foto"
-            name: "photo"
-            widget: "image"
-            tagname: ''
-            media_library:
-            output_filename_only: true
+            multiple: true
+            resize: 1920x1080
