@@ -34,8 +34,6 @@ collections:
                     quality: 60
                     crop: fill
                     aspect_ratio: 16:9
-        name: cloudinary
-        output_filename_only: false
 
   - label: "Sobre"
     name: "sobre"
