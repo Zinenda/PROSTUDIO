@@ -1,9 +1,9 @@
 <!-- netlify identity widget -->
-{% if page.title == "PROSTUDIO" %}
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-{% endif %}
+{% unless page.layout == "page" %}
+   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script> 
+{% endunless %}
 
-<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700,900" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900" rel="stylesheet">
 <script defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js" integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" defer></script>

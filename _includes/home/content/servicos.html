@@ -7,19 +7,14 @@
 			</span>
 		  </h4>
 		  
-		  <div class="row slick-servicos">
+		  <div class="row">
 			{% for item in site.servicos %}
-				<div>
-					<div class="card hoverable">
-						<div class="card-image">
-							<img src="{{ item.main-image }}" alt="{{ item.title }}">
-						</div>
-						<div class="card-action">
-							<a href="{{ item.url }}" title="{{ item.title }}" class="btn waves-effect waves-light">Veja Mais</a>
-							<a href="mailto:{{ site.email }}" class="btn-flat waves-effect waves-primary hide-on-small-only" title="Email">Contacte-nos <i class="fas fa-envelope-open-text"></i></a>
-							<a href="https://wa.me/258846101512" class="btn-flat waves-effect waves-primary hide-on-med-and-up" title="WhatsApp">Contacte-nos <i class="fab fa-whatsapp"></i></a>
-						</div>
-					</div>
+				<div class="col s12 l4 center">
+					<img src="{{ item.main-image }}" alt="{{ item.title }}" class="responsive-img" width="200">
+					<p class="bolder">{{ item.title }}</p>
+					<a href="{{ item.url }}" class="btn">Veja Mais</a>
+					<a href="maito:{{ site.email }}" class="btn-floating hide-on-small-only"><i class="fas fa-envelope-open-text"></i></a>
+					<a href="https://wa.me/258846101512" class="btn-floating hide-on-med-and-up"><i class="fab fa-whatsapp"></i></a>
 				</div>
 			{% endfor %}
 		  </div>
