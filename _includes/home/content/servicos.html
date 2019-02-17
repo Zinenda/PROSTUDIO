@@ -10,7 +10,7 @@
 		  <div class="row">
 			{% for item in site.servicos %}
 				<div class="col s12 l4 center">
-					<img src="{{ item.main-image }}" alt="{{ item.title }}" class="responsive-img" width="200">
+					<img src="https://res.cloudinary.com/prostudio-moz/image/upload/w_200, c_scale/{{ item.main-image }}" alt="{{ item.title }}" class="responsive-img" width="200">
 					<p class="bolder">{{ item.title }}</p>
 					<a href="{{ item.url }}" class="btn">Veja Mais</a>
 					<a href="maito:{{ site.email }}" class="btn-floating hide-on-small-only"><i class="fas fa-envelope-open-text"></i></a>

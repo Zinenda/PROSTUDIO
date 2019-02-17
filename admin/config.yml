@@ -20,7 +20,7 @@ collections:
   - label: "Fotos de Capa"
     name: "covers"
     folder: "collections/_covers"
-    create: true
+    create: false
     fields: 
       - {label: "Titulo", name: "title", widget: "string"}
       - label: "Imagem"
@@ -34,6 +34,8 @@ collections:
                     quality: 60
                     crop: fill
                     aspect_ratio: 16:9
+        name: cloudinary
+        output_filename_only: false
 
   - label: "Sobre"
     name: "sobre"
@@ -51,16 +53,18 @@ collections:
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
       - {label: "Serviço", name: "title", widget: "string"}
+      - label: "Paginação"
+        name: "pagination"
+        widget: "object"
+        fields:
+          - {label: "Activo", name: "enabled", widget: "boolean", default: "true"}
+          - {label: "Serviço", name: "tag", widget: "string"}
       - label: "Imagem Principal"
         name: "main-image"
         widget: "image"
         media_library:
           config:
-            default_transformation:
-              -   - fetch_format: auto
-                    width: 200
-                    quality: 60
-                    crop: fill
+          output_filename_only: true
       - label: "Galeria"
         name: "gallery"
         widget: "list"
@@ -71,9 +75,4 @@ collections:
             widget: "image"
             tagname: ''
             media_library:
-              config:
-                default_transformations:
-                  -   - fetch_format: auto
-                        width: auto:breakpoints_640_1920_30  
-                        quality: 60
-                        crop: fill
+            output_filename_only: true
