@@ -10,7 +10,7 @@
 		  <div class="row">
 			{% for item in site.servicos %}
 				<div class="col s12 l4 center">
-					<img src="{{ item.main-image }}/-/preview/400x400/" alt="{{ item.title }}" class="responsive-img">
+					<img src="{{ item.main-image }}/-/preview/400x400/" alt="{{ item.title }}" class="responsive-img" style="width: 400px; height: 200px">
 					<p class="bolder">{{ item.title }}</p>
 					<a href="{{ item.url }}" class="btn">Veja Mais</a>
 					<a href="maito:{{ site.email }}" class="btn-floating hide-on-small-only"><i class="fas fa-envelope-open-text"></i></a>

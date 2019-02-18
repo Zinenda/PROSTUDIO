@@ -2,17 +2,12 @@
 layout: default
 ---
 
-<section class="section">
-    {% include gallery/btncontainer.html %}
-    <section id="masonry-grid" class="row">
-        {% for item in paginator.posts %}
-            <div class="col s6 l4 no-padding {{ item.tag }}">
-                <a href="{{ item.image }}" data-title="{{ item.title }}" data-lightbox="{{ page.title }}">
-                    <img src="https://res.cloudinary.com/<cloud_name>/<resource_type>/<type>/w_auto:breakpoints_200_1920_30, c_fill, q_60/{{ item.photo }}" alt="{{ item.photo-title }}" class="hoverable">
-                </a>
-            </div>
-        {% endfor %}
-    </section>
+<section class="container">
+    <div id="masonry-grid" class="row">
+        {% if page.pagination.tag == "booking" %}
+            {% for item in site.servicos.first.photo %}
+                {% include grid-loop.html %}
+            {% endfor %}
+        {% endif %}
+    </div>
 </section>
-
-{% include pagination.html %}
