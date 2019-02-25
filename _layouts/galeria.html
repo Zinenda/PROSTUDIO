@@ -1,0 +1,19 @@
+---
+layout: default
+---
+
+<sectio class="section">
+    <div class="container">
+        <div id="masonry-grid" class="row">
+            {% for item in paginator.posts %}
+                <div class="col s6 l3">
+                    <a href="{{ item.photo }}" data-caption="{{ item.title }}" data-lightbox="galeria">
+                        <img src="{{ item.photo }}" alt="{{ item.title }}">
+                    </a>
+                </div>    
+            {% endfor %}
+        </div>
+    </div>
+</sectio>
+
+{% include pagination.html %}

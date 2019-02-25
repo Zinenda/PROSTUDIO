@@ -47,3 +47,16 @@ collections:
         media_library:
           config:
             multiple: true
+
+  - label: "Galeria"
+    name: "galeria"
+    create: true
+    folder: "collections/_galeria"
+    fields:
+      - {label: "Nome da Foto", name: "title", widget: "string"}
+      - label: "Foto"
+        name: "photo"
+        widget: "image"
+        media_library:
+          config:
+            multiple: false

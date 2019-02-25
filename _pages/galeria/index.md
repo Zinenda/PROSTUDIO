@@ -1,7 +1,6 @@
 ---
 title: Galeria
-image: /assets/img/headers/pexels-photo-1655817.jpeg
-layout: page
+layout: galeria
 pagination:
     enabled: true
     collection: galeria
