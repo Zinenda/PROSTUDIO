@@ -2,18 +2,16 @@
 layout: default
 ---
 
-<sectio class="section">
-    <div class="container">
-        <div id="masonry-grid" class="row">
-            {% for item in paginator.posts %}
-                <div class="col s6 l3">
-                    <a href="{{ item.photo }}" data-caption="{{ item.title }}" data-lightbox="galeria">
-                        <img src="{{ item.photo }}" alt="{{ item.title }}">
-                    </a>
-                </div>    
-            {% endfor %}
-        </div>
+<section class="container">
+    <div id="masonry-grid" class="row">
+        {% for item in paginator.posts %}
+            <div class="col s6 l3 no-padding">
+                <a href="{{ item.photo }}" data-title="{{ item.title }}" data-lightbox="galeria">
+                    <img src="{{ item.photo }}" alt="{{ item.title }}">
+                </a>
+            </div>    
+        {% endfor %}
     </div>
-</sectio>
+</section>
 
 {% include pagination.html %}
