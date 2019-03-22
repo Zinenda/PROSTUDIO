@@ -4,10 +4,8 @@ layout: default
 
 <section class="container">
     <div id="masonry-grid" class="row">
-        {% if page.pagination.tag == "booking" %}
-            {% for item in site.servicos.first.photo %}
-                {% include grid-loop.html %}
-            {% endfor %}
-        {% endif %}
+        {% for item in page.photo reversed %}
+            {% include grid-loop.html %}
+        {% endfor %}
     </div>
 </section>
