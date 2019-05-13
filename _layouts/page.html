@@ -2,10 +2,16 @@
 layout: default
 ---
 
+{% include masonry.html %}
+
 <section class="container">
-    <div id="masonry-grid" class="row">
+    <div class="masonry">
         {% for item in page.photo reversed %}
-            {% include grid-loop.html %}
+            <div class="item">
+                <a href="{{ item }}" data-lightbox="{{ page.tag }}">
+                    <img src="{{ item }}" alt="{{ page.tag }}">
+                </a>
+            </div>
         {% endfor %}
     </div>
 </section>

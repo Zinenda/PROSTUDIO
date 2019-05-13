@@ -2,10 +2,12 @@
 layout: default
 ---
 
+{% include masonry.html %}
+
 <section class="container">
-    <div id="masonry-grid" class="row">
+    <div class="masonry">
         {% for item in paginator.posts %}
-            <div class="col s6 l3 no-padding">
+            <div class="item">
                 <a href="{{ item.photo }}" data-title="{{ item.title }}" data-lightbox="galeria">
                     <img src="{{ item.photo }}" alt="{{ item.title }}">
                 </a>
