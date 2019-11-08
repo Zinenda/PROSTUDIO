@@ -8,11 +8,11 @@
 <header class="page-header center-align">
     {% include nav/navbar.html %}
     <div class="header-content">
-        <div class="divider white"></div>
+        <div class="divider"></div>
             <h1 class="bolder">{{ site.title }}</h1>
 
-            <h4>{{ site.description }}</h4>
-        <div class="divider white"></div>
+            <h2>{% if page.layout == "page" %}{{ page.title }} {% else %} {{ site.description }} {% endif %}</h2>
+        <div class="divider"></div>
         {% include social.html %}
     </div>
 </header>

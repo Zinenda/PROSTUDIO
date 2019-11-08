@@ -8,8 +8,8 @@ layout: default
     <div class="masonry">
         {% for item in page.photo reversed %}
             <div class="item">
-                <a href="{{ item }}" data-lightbox="{{ page.tag }}">
-                    <img src="{{ item }}" alt="{{ page.tag }}">
+                <a data-href="{{ item }}" data-lightbox="{{ page.tag }}" class="lazy">
+                    <img data-src="{{ item }}" alt="{{ page.tag }}" class="lazy">
                 </a>
             </div>
         {% endfor %}
