@@ -17,7 +17,6 @@ sass:
 plugins:
   - jekyll-seo-tag
   - jekyll-paginate-v2
-  - jekyll-target-blank
   - jekyll-email-protect
   - jekyll-analytics
 
