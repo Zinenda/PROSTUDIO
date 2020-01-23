@@ -7,10 +7,8 @@ layout: default
 <section class="container">
     <div class="masonry">
         {% for item in paginator.posts %}
-            <div class="item">
-                <a href="{{ item.photo }}" data-title="{{ item.title }}" data-lightbox="galeria">
-                    <img src="{{ item.photo }}" alt="{{ item.title }}">
-                </a>
+            <div class="item" data-aos="zoom-in" data-aos-duration="3000">
+                <img data-src="{{ item.photo }}" alt="{{ item.title }}" class="lazy materialboxed">
             </div>    
         {% endfor %}
     </div>

@@ -7,10 +7,8 @@ layout: default
 <section class="container">
     <div class="masonry">
         {% for item in page.photo reversed %}
-            <div class="item">
-                <a data-href="{{ item }}" data-lightbox="{{ page.tag }}" class="lazy">
-                    <img data-src="{{ item }}" alt="{{ page.tag }}" class="lazy">
-                </a>
+            <div class="item" data-aos="zoom-in" data-aos-duration="3000">
+                <img data-src="{{ item }}" alt="{{ page.tag }}" class="lazy materialboxed">
             </div>
         {% endfor %}
     </div>

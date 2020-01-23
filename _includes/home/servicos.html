@@ -1,24 +1,34 @@
+<style>
+    .cartao-de-servico {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+</style>
+
 <section id="servicos" class="section scrollspy center">
     <div class="container">
         <div class="row">
             {% for item in site.servicos %}
-                <div class="col s12 l6">
-                    <div class="card-panel hoverable" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url({{ item.main-image }});
-                    background-position: center;
-                    background-repeat: no-repeat;
-                    background-size: cover;
-                    background-attachment: fixed;">
-                        <div class="divider"></div>
-                        <br><br>
+                <div class="col s12 l6" data-aos="zoom-in" data-aos-duration="3000">
+                    <div class="cartao-de-servico lazy" data-src="{{ item.main-image }}" style="height: 50vh; position: relative;">
+                        <div class="container" style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);">
+                            <h4 class="bolder center" style="background-color: rgba(0,0,0,0.5); border: solid 4px #fff; padding: 10px;">{{ item.title }}</h4>
+                            <a href="{{ item.url }}" class="btn waves-effect waves-light white-text">Veja Mais</a>
+                        </div>
+                        <!--
+                            <div class="divider"></div>
+                            <br><br>
 
-                        <h4>{{ item.title }}</h4>
+                            <h4>{{ item.title }}</h4>
 
-                        <br><br>
+                            <br><br>
 
-                        <div class="divider"></div>
-                        <br><br>
+                            <div class="divider"></div>
+                            <br><br>
 
-                        <a href="{{ item.url }}" class="btn-flat waves-effect waves-light white-text" style="border: solid 1px #fff">Veja Mais</a>
+                        -->
                     </div>
                 </div>
             {% endfor %}

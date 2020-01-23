@@ -1,8 +1,7 @@
 title: PROSTUDIO
 email: info@prosutiomoz.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Videos e Fotografias
-baseurl: "" # the subpath of your site, e.g. /blog
+  Videos & Fotografias
 url: "https://prostudiomoz.com" # the base hostname & protocol for your site, e.g. http://example.com
 image: /assets/img/prostudio.svg
 logo: /assets/img/blacklogo.svg
@@ -17,8 +16,6 @@ sass:
 plugins:
   - jekyll-seo-tag
   - jekyll-paginate-v2
-  - jekyll-email-protect
-  - jekyll-analytics
 
 permalink: pretty
 
@@ -33,7 +30,7 @@ collections:
 # Pagination Settings
 pagination:
   enabled: true
-  per_page: 35
+  per_page: 20
   permalink: '/:num/'
   title: ':title | :num of :max'
   limit: 0

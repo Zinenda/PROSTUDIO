@@ -1,7 +1,7 @@
 <section class="section scrollspy" id="galeria">
     <div class="section-grid">
         {% for item in site.galeria limit: 12 %}
-            <img data-src="{{ item.photo }}" alt="{{ item.title }}" data-caption="{{ item.title }}" class="lazy materialboxed">
+            <img data-src="{{ item.photo }}" alt="{{ item.title }}" data-caption="{{ item.title }}" class="lazy materialboxed" data-aos="zoom-in" data-aos-duration="3000">
         {% endfor %}
     </div>
 <br>
