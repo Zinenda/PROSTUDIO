@@ -1,13 +1,42 @@
-<section class="section scrollspy" id="sobre">
+<section id="sobre" class="section scrollspy">
     <div class="container">
-        <h3 class="bolder center-align underline">Seja Bem Vindo</h3>
-
-        <article class="text-justified container light">
+        <div class="section-grid">
             {% for item in site.sobre limit: 1 %}
-                {{ item.content }}
+                <section>
+                    <h4>{{ item.title }}</h4>
+                
+                    <article class="flow-text text-justified">
+                        {{ item.content | truncatewords: 25 }}
+                    </article>
+                    <a href="#sobre{{ forloop.index0 }}" class="btn modal-trigger">Saiba Mais</a>
+                </section>
             {% endfor %}
-        </article>
-        
-        
+
+            <div class="slider">
+                <ul class="slides">
+                    {% for item in site.sobre limit: 4 %}
+                        <li>
+                            <img src="{{ item.image }}" alt="{{ item.title }}">
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+        <section class="section">
+            <div class="section-grid">
+                {% for item in site.sobre offset: 1 limit: 3 %}
+                    <div class="card-panel hoverable modal-trigger" data-target="sobre{{ forloop.index }}" style="cursor: pointer; background-color: #000; border: 1px solid #fff;">
+                        <div class="center">
+                            <span class="fas fa-5x fa-{{ item.icon }}"></span>
+                            <br>
+                            <h5>{{ item.title }}</h5>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </section>
     </div>
+
+    {% include home/sobreModal.html %}
 </section>

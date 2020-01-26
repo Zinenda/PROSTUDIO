@@ -1,0 +1,13 @@
+{% for item in site.sobre %}
+    <div id="sobre{{ forloop.index0 }}" class="modal black">
+        <div class="modal-content">
+            <div class="container">
+                <h6>{{ item.title }}</h6>
+
+                <div class="article text-justified light">
+                    {{ item.content }}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endfor %}

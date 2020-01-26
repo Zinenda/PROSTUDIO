@@ -21,6 +21,7 @@ collections:
     fields:
       - {label: "Titulo", name: "title", widget: "string"}
       - {label: "Icones", name: "icons", widget: "string"}
+      - {label: "Imagem", name: "image", widget: "image"}
       - {label: "Descrição", name: "body", widget: "markdown"}
 
   - label: "Serviços"
