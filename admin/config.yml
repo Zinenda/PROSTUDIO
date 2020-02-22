@@ -53,4 +53,4 @@ collections:
     folder: "collections/_galeria"
     fields:
       - {label: "Nome da Foto", name: "title", widget: "string"}
-      - {label: "Foto", name: "photo, widget: "image"}
+      - {label: "Foto", name: "photo", widget: "image"}
