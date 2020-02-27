@@ -12,13 +12,13 @@
                 </section>
             {% endfor %}
 
-            <img src="/assets/uploads/ProstudioTeam.jpg?nf_resize=fit&w=640" alt="{{ site.title }}">
+            <img class="lazy" data-src="/assets/uploads/ProstudioTeam.jpg?nf_resize=fit&w=640" alt="{{ site.title }}">
         </div>
 
         <section class="section">
             <div class="section-grid">
                 {% for item in site.sobre offset: 1 limit: 3 %}
-                    <div class="card-panel hoverable modal-trigger" data-target="sobre{{ forloop.index }}" style="cursor: pointer; background-color: #000; border: 1px solid #fff;">
+                    <div class="card-panel hoverable modal-trigger" data-aos="zoom-in" data-aos-duration="3000" data-target="sobre{{ forloop.index }}" style="cursor: pointer; background-color: #000; border: 1px solid #fff;">
                         <div class="center">
                             <span class="fas fa-5x fa-{{ item.icon }}"></span>
                             <br>
