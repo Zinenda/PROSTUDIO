@@ -12,10 +12,11 @@ logo_url: https://d33wubrfki0l68.cloudfront.net/f1afd154dd1bd09e6957dce7291bfc56
 collections:
   - label: "Sobre"
     name: "sobre"
+    create: true
     folder: "collection/_sobre"
     fields:
       - {label: "Titulo", name: "title", widget: "string"}
-      - {label: "Icones", name: "icons", widget: "list", options: ["info", "dot-circle", "check-double", "crosshairs"]}
+      - {label: "Icones", name: "icons", widget: "select", options: ["info", "dot-circle", "check-double", "crosshairs"]}
       - {label: "Descrição", name: "body", widget: "markdown"}
 
   - label: "Serviços"
@@ -36,5 +37,5 @@ collections:
       - {label: "Foto", name: "photo", widget: "image"}
       - label: "Categoria"
         name: "category"
-        widget: "list"
+        widget: "select"
         options: ["Booking", "Casamentos", "Festas", "Publicidades", "Corporativos"]
