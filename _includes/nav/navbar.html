@@ -1,4 +1,4 @@
-<nav class="transparent">
+<nav class="nav-extended transparent">
     <div class="nav-wrapper">
         <a href="/" class="brand-logo center">
             {% include whitelogo.svg %}
@@ -12,8 +12,16 @@
 
         <ul class="right">
             <li>
-                <a href="#contactos" class="btn waves-effect waves-light modal-trigger">Contacte-nos</a>
+                <a href="#contactos" class="btn waves-effect waves-light modal-trigger hide-on-small-only">Contacte-nos</a>
             </li>
         </ul>
+    </div>
+
+    <div class="nav-content">
+        <div class="center">
+            <button data-target="contactos" class="btn-floating btn-large halfway-fab waves-effect waves-circle waves-light modal-trigger hide-on-med-and-up">
+                <i class="fas fa-lg fa-envelope"></i>
+            </button>
+        </div>
     </div>
 </nav>

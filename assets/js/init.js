@@ -7,5 +7,12 @@ $(document).ready(function(){
 	$('.materialboxed').materialbox();
 	
 	// init Lazy Image Load
-	$('.lazy').lazy();
+    $('.lazy').lazy();
+    
+    var $container = $('#masonry-grid');
+    
+    $container.masonry({
+        columnWidth: '.col',
+        itemSelector: '.col',
+    });
 });

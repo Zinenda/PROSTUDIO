@@ -2,14 +2,39 @@
 layout: default
 ---
 
-{% include masonry.html %}
+<section class="section" id="galeria">
+    <div class="container">
+        <div id="masonry-grid" class="row">
+            {% for item in site.galeria %}
+                {% if page.title == "Galeria"%}
+                    <div class="col s12 m6 l4">
+                        <img 
+                            data-src="{{ item.photo }}?nf_resize=fit&w=260"
+                            alt="{{ item.title }}"
+                            data-srcset="{{ item.photo }}?nf_resize=fit&w=320 320w,
+                            {{ item.photo }}?nf_resize=fit&w=640 640w,
+                            {{ item.photo }}?nf_resize=fit&w=1024 1024w
+                            {{ item.photo }}?nf_resize=fit&w=1920 1920w"
+                            class="materialboxed"
+                            data-caption="{{ item.title }}">
+                    </div>
 
-<section class="container">
-    <div class="masonry">
-        {% for item in page.photo reversed %}
-            <div class="item" data-aos="zoom-in" data-aos-duration="3000">
-                <img data-src="{{ item }}" alt="{{ page.tag }}" class="lazy materialboxed">
-            </div>
-        {% endfor %}
+                    {% elsif page.title != "Galeria" %}
+                        {% if item.category == page.title %}
+                            <div class="col s12 m6 l4">
+                                <img 
+                                    data-src="{{ item.photo }}?nf_resize=fit&w=260"
+                                    alt="{{ item.title }}"
+                                    data-srcset="{{ item.photo }}?nf_resize=fit&w=320 320w,
+                                    {{ item.photo }}?nf_resize=fit&w=640 640w,
+                                    {{ item.photo }}?nf_resize=fit&w=1024 1024w
+                                    {{ item.photo }}?nf_resize=fit&w=1920 1920w"
+                                    class="materialboxed"
+                                    data-caption="{{ item.title }}">
+                            </div>
+                        {% endif %}
+                {% endif %}
+            {% endfor %}
+        </div>
     </div>
 </section>

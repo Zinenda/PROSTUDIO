@@ -10,20 +10,12 @@ display_url: https://prostudiomoz.com
 logo_url: https://d33wubrfki0l68.cloudfront.net/f1afd154dd1bd09e6957dce7291bfc56834b4489/b2edb/assets/img/brand/logo.svg
 
 collections:
-  - label: "Imagem de Fundo"
-    name: "cover-img"
-    folder: "collections/_covers"
-    fields:
-      - {label: "Imagem", name: "image", widget: "image"}
-      - {label: "Titulo", name: "title", widget: "string"}
-
   - label: "Sobre"
     name: "sobre"
     folder: "collection/_sobre"
     fields:
       - {label: "Titulo", name: "title", widget: "string"}
-      - {label: "Icones", name: "icons", widget: "string"}
-      - {label: "Imagem", name: "image", widget: "image"}
+      - {label: "Icones", name: "icons", widget: "list", options: ["info", "dot-circle", "check-double", "crosshairs"]}
       - {label: "Descrição", name: "body", widget: "markdown"}
 
   - label: "Serviços"
@@ -34,18 +26,6 @@ collections:
       - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
       - {label: "Serviço", name: "title", widget: "string"}
       - {label: "Imagem de capa", name: "main-image", widget: "image"}
-      - label: "Paginação"
-        name: "pagination"
-        widget: "object"
-        fields:
-          - {label: "Ativação", name: "enabled", widget: "boolean", default: true}
-          - {label: "Categoria", name: "tag", widget: "string"}
-      - label: "Foto"
-        name: "photo"
-        widget: "image"
-        media_library:
-          config:
-            multiple: true
 
   - label: "Galeria"
     name: "galeria"
@@ -54,3 +34,7 @@ collections:
     fields:
       - {label: "Nome da Foto", name: "title", widget: "string"}
       - {label: "Foto", name: "photo", widget: "image"}
+      - label: "Categoria"
+        name: "category"
+        widget: "list"
+        options: ["Booking", "Casamentos", "Festas", "Publicidades", "Corporativos"]

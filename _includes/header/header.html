@@ -9,9 +9,17 @@
     {% include nav/navbar.html %}
     <div class="header-content">
         <div class="divider"></div>
-            <h1 class="bolder">{{ site.title }}</h1>
+            <div class="hide-on-med-and-down">
+                <h1>{{ site.title }}</h1>
 
-            <h2>{% if page.layout == "page" %}{{ page.title }} {% else %} {{ site.description }} {% endif %}</h2>
+                <h2>{% if page.layout == "page" %}{{ page.title }} {% else %} {{ site.description }} {% endif %}</h2>
+            </div>
+
+            <div class="hide-on-large-only">
+                <h3>{{ site.title }}</h3>
+
+                <h4>{% if page.layout == "page" %}{{ page.title }} {% else %} {{ site.description }} {% endif %}</h4>
+            </div>
         <div class="divider"></div>
         {% include social.html %}
     </div>

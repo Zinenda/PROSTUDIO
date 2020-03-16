@@ -29,7 +29,7 @@ collections:
 
 # Pagination Settings
 pagination:
-  enabled: true
+  enabled: false
   per_page: 20
   permalink: '/:num/'
   title: ':title | :num of :max'
